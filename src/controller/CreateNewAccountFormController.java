@@ -58,7 +58,7 @@ public class CreateNewAccountFormController {
 
             Statement statement = connection.createStatement();
 
-            ResultSet resultSet = statement.executeQuery("select id from user order by id desc limit 1");
+            ResultSet resultSet = statement.executeQuery("select id from customer order by id desc limit 1");
 
             boolean isExist = resultSet.next();
 
@@ -109,7 +109,7 @@ public class CreateNewAccountFormController {
 
             try {
 
-                PreparedStatement preparedStatement = connection.prepareStatement("insert into user values(?,?,?,?)");
+                PreparedStatement preparedStatement = connection.prepareStatement("insert into customer values(?,?,?,?)");
 
                 preparedStatement.setObject(1,id);
                 preparedStatement.setObject(2,userName);

@@ -31,7 +31,7 @@ public class LoginFormController {
     }
 
     public void lblNewAccountOnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        Parent parent = FXMLLoader.load(this.getClass().getResource("/view/CreateNewCustomerAccountForm.fxml"));
+        Parent parent = FXMLLoader.load(this.getClass().getResource("../view/CreateNewAccountForm.fxml"));
         Scene scene = new Scene(parent);
         Stage primaryStage = (Stage) this.root.getScene().getWindow();
         primaryStage.setScene(scene);
@@ -51,7 +51,7 @@ public class LoginFormController {
         Connection connection = DBConnection.getInstance().getConnection();
 
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("select * from user where name = ? and password = ?");
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from customer where name = ? and password = ?");
             preparedStatement.setObject(1,userName);
             preparedStatement.setObject(2,password);
             ResultSet resultSet = preparedStatement.executeQuery();

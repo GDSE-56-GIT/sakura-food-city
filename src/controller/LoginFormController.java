@@ -66,7 +66,7 @@ public class LoginFormController {
                 Scene scene = new Scene(parent);
                 Stage primaryStage = (Stage) this.root.getScene().getWindow();
                 primaryStage.setScene(scene);
-                primaryStage.setTitle("To-Do Form");
+                primaryStage.setTitle("Item");
                 primaryStage.centerOnScreen();
             }else{
                 new Alert(Alert.AlertType.ERROR,"invalid User Name or Password..").showAndWait();

@@ -62,7 +62,7 @@ public class LoginFormController {
                 userID = resultSet.getString(1);
                 name = resultSet.getString(2);
 
-                Parent parent = FXMLLoader.load(this.getClass().getResource("../view/ToDoForm.fxml"));
+                Parent parent = FXMLLoader.load(this.getClass().getResource("../view/ItemForm.fxml"));
                 Scene scene = new Scene(parent);
                 Stage primaryStage = (Stage) this.root.getScene().getWindow();
                 primaryStage.setScene(scene);
